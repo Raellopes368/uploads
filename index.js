@@ -44,6 +44,10 @@ app.post('/upload', upload.single('photo'), (req, res, next) => {
   res.json(req.file)
 })
 
+app.get("/", (req, res) => {
+  res.send("SUCCESS")
+})
+
 let port = process.env.PORT || 3000;
 http.listen(port, () => {
   console.log(`Listening on port ${port}`);
